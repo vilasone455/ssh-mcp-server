@@ -1,0 +1,26 @@
+{
+  "name": "ssh-mcp-server",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "mcp-ssh": "dist/index.js"
+  },
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "build": "tsc && shx chmod +x dist/*.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "ssh2": "^1.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "typescript": "^5.8.3",
+    "shx": "^0.4.0"
+  }
+}
